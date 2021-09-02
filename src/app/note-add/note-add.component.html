@@ -1,0 +1,25 @@
+
+
+
+<section>
+
+    
+
+
+    <div class="table">
+        <button class="back" routerLink=''>Назад</button>
+        <form>
+            <div class="title">
+                <h1>Запись "{{noteForm.title}}"</h1>
+                <input [(ngModel)]="noteForm.title" name="title">
+            </div>
+
+            <textarea class="text" [(ngModel)]="noteForm.text" name="text" ></textarea>
+
+        </form>
+        <button class="delete"  routerLink='' (click)="addNote()">Добавить</button>
+
+    </div>
+
+
+</section>

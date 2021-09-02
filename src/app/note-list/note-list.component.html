@@ -1,0 +1,25 @@
+<section>
+
+    <div>
+        <h1>Блог</h1>
+    </div>
+
+    <div class="flex-container">
+        <div *ngFor='let note of notes; let i = index' class="flex-item">
+            <div >
+                <h4 class="title">{{note.title}}</h4>
+                <div class="content-box">
+                    <div class="content-text">
+                        {{note.text}}
+                    </div>
+                </div>
+
+            </div>
+            <div class="btn-pass">
+                <button routerLink='note-changed' (click)="saveCurrentNote(i)">Перейте</button>
+            </div>
+        </div>
+
+    </div>
+    <button class="add" routerLink='/note-add'>+ Добавить</button>
+</section>
